@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UXEN</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <div class="particulas">
+
+    </div>
+    <nav class="main-nav">
+        <ul class="menu">
+            <li><a href="#main" class="menu-link">Início</a></li>
+
+            <li><a href="#about" class="menu-link">Sobre</a></li>
+
+            <li><a href="#project" class="menu-link">Projetos</a></li>
+
+            <li><a href="#contact" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="main" class="cabecalho">
+            <img src="imagens/UXEN.png" alt="Logo Empresa" class="foto-logo">
+            <h1>UXEN Solutions</h1>
+            <p class="paragrafo-sub-titulo">Criação e Manutenção de Sites Profissionais</p>
+    </main>
+
+    <section id="about" class="about-text">
+        <h2 class="sobre-titulo">Sobre</h2>
+       <div class="sobre-caixa">
+        <p class="sobre-paragrafo">Somos uma empresa especializada na criação e manutenção de sites profissionais, atuando com foco em performance, segurança, design moderno e estratégias digitais. Nosso objetivo é ajudar negócios a conquistarem presença sólida e eficiente na internet, através de soluções web sob medida.
+
+Com uma equipe qualificada e atendimento personalizado, atendemos empresas de todos os tamanhos, oferecendo desde sites institucionais simples até plataformas completas de e-commerce.</p>
+       </div> 
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="projetos-titulo">Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="imagens/car-img.jpg" alt="Foto de carro" class="projetos-img">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Loja de Carros</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos mollitia voluptates quae repellat quasi non accusamus distinctio. Corporis modi, ipsa ab ut natus qui, nulla neque tempore, animi delectus facilis?</p>
+                </div>
+                
+            </div>
+
+            <div class="projetos-card">
+                <img src="imagens/pc-img.jpg" alt="Foto de Computador" class="projetos-img">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Site Responsivo</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, provident facilis. Fuga dicta omnis, tempore iste reiciendis quibusdam laudantium doloribus itaque pariatur rem delectus deleniti a, officia maxime, temporibus quia.</p>
+                </div>
+                
+            </div>
+
+            <div class="projetos-card">
+                <img src="imagens/barber-img.jpg" alt="Foto de barbearia" class="projetos-img">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Catálogo Barbearia</h3>
+                    <p class="paragrafo-projetos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id tenetur expedita nisi atque modi saepe voluptatibus neque nemo at laboriosam assumenda vero, minima veritatis vitae corporis eligendi repellendus voluptas repudiandae.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="form" onsubmit="enviarForm(event)">
+            <div class="form-group">
+                <input placeholder="Nome" class="form-control" id="name" type="text" >
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder='Digite sua Mensagem' id="message" ></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar via WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+
+        function enviarForm(event) {
+            event.preventDefault()
+           const nome = document.getElementById('name').value;
+        const mensagem = document.getElementById('message').value;
+        const telefone = '5511976580711'
+        const texto = `Olá! Me chamo ${nome.value} e gostaria de:${mensagem.value}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url =`https://wa.me/${telefone}?text=${msgFormatada}`
+        open(url, '_blank')
+        }
+    </script>
+        <footer>
+            <div class="footer-content">
+                <p>Fast Click Agency &copy; 2025</p>
+            
+        </footer>
+    
+</body>
+</html>
